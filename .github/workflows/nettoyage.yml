@@ -1,8 +1,9 @@
 name: Nettoyage
 
-# Efface régulièrement les exécutions du bot et ses commentaires (plus de 10 minutes),
+# Efface régulièrement les commentaires du bot (plus de 10 minutes),
 # pour que les réponses ne restent pas visibles dans le dépôt public.
-# Les exécutions du workflow « CI » des élèves sont gardées : le bot en a besoin.
+# Les exécutions ne sont pas effacées : leurs journaux ne contiennent aucune réponse,
+# et chaque suppression compterait dans la limite de 1000 appels par heure du dépôt.
 on:
   schedule:
     - cron: '*/15 * * * *'
@@ -21,17 +22,6 @@ jobs:
     name: Nettoyage
     runs-on: ubuntu-latest
     steps:
-      - name: Supprimer les exécutions terminées du bot et du nettoyage
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPO: ${{ github.repository }}
-          RUN_ID: ${{ github.run_id }}
-        run: |
-          gh api --paginate "repos/$REPO/actions/runs?status=completed&per_page=100" \
-            --jq ".workflow_runs[] | select(.name == \"Bot\" or .name == \"Nettoyage\") | select(.id != $RUN_ID) | select((now - (.updated_at | fromdateiso8601)) > 600) | .id" \
-          | while read -r id; do
-              gh api -X DELETE "repos/$REPO/actions/runs/$id" > /dev/null || true
-            done
       - name: Supprimer les commentaires du bot
         env:
           GH_TOKEN: ${{ github.token }}

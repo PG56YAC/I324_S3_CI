@@ -139,11 +139,14 @@ function ignoreMarkdown(motifs) {
     return (Array.isArray(motifs) ? motifs : motifs ? [motifs] : []).some((m) => versRegex(m).test('README.md'));
 }
 
+// Cache commun à toutes les évaluations d'une exécution : le jeton des workflows est limité
+// à 1000 appels par heure et par dépôt, chaque job ou artefact n'est lu qu'une fois.
+const cache = { jobs: {}, artifacts: {} };
+
 // ---------------------------------------------------------------------------------------------
 // Contexte d'évaluation d'un commit
 // ---------------------------------------------------------------------------------------------
 async function contexte({ pseudo, branche, sha, runs, coupure, lts }) {
-    const cache = { jobs: {}, artifacts: {} };
     const visibles = runs.filter((r) => !coupure || r.created_at <= coupure);
     const termines = visibles.filter((r) => r.status === 'completed');
     const lu = lireWorkflow(lire(sha, FICHIER_CI));
@@ -246,7 +249,7 @@ const MISSIONS = [
             // Une exécution rouge à cause du lint, après l'ajout du lint au pipeline
             let etapeRouge = null;
             let runRouge = null;
-            for (const r of c.termines) {
+            for (const r of c.termines.filter((x) => x.conclusion === 'failure').slice(0, 5)) {
                 if (r.conclusion !== 'failure') continue;
                 const w = c.workflowDe(r.head_sha);
                 if (!w || !tousJobs(w).some(lanceLint)) continue;
