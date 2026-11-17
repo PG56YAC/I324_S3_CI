@@ -1,0 +1,8 @@
+{
+  "name": "bot-i324-s3-ci",
+  "private": true,
+  "description": "Bot des missions I324 S3 (intégration continue)",
+  "dependencies": {
+    "js-yaml": "^5.5.0"
+  }
+}
