@@ -1,5 +1,5 @@
 // Règles sur le nom d'une tâche
-const LONGUEUR_MAX = 100;
+const LONGUEUR_MAX = 40;
 
 function nomValide(nom) {
     if (typeof nom !== 'string') return false;
