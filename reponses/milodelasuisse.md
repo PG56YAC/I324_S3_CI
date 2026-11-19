@@ -1,7 +1,7 @@
 # Réponses de milodelasuisse
 
 q1: Nettoyage
-q2:lint
+q2:Run npm run lint
 q3:
 q4:
 q5:
