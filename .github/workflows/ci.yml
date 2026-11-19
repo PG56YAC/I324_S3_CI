@@ -34,3 +34,9 @@ jobs:
           node-version: lts/*
       - run: npm ci
       - run: npm pack
+
+      - name: Run Linter
+        run: npm run lint
+
+      - name: Run Tests
+        run: npm run test
