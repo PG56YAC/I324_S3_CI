@@ -1,6 +1,6 @@
 # Réponses de gatienclerc
 
-nettoyage.yml : le nom du workflow qui se lance sans que personne ne pousse
+q1: nettoyage.yml
 q2:
 q3:
 q4:
