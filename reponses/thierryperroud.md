@@ -3,7 +3,7 @@
 q1: Nettoyage
 q2: Run npm run lint
 q3: 3
-q4: I324_S3_CI-1.0.0.tgz
+q4: i324_s3_ci-1.0.0.tgz
 q5:
 q6:
 q7:
