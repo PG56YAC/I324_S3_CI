@@ -1,6 +1,6 @@
 # Réponses de <pseudo>
 
-q1: nettoyage.yml
+q1: Nettoyage
 q2:
 q3:
 q4:
