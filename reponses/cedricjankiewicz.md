@@ -1,7 +1,7 @@
 # Réponses de cedricjankiewicz
 
 q1: Nettoyage
-q2: lint
+q2: lint: src/index.js#L34
 q3:
 q4:
 q5:
