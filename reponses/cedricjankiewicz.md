@@ -1,7 +1,7 @@
 # Réponses de cedricjankiewicz
 
 q1: Nettoyage
-q2: lint: src/index.js#L34
+q2: Run npm run lint
 q3:
 q4:
 q5:
