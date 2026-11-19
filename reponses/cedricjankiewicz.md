@@ -6,6 +6,6 @@ q3: 2
 q4: i324-s3-ci-1.0.0.tgz
 q5: tests
 q6: Lancer les tests unitaires
-q7: refactor: limite la longueur des noms de tâches
+q7: accepte un nom de 50 caractères
 q8: spec/validation.spec.js
 q9:
