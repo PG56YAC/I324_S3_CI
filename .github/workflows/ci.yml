@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 25, 26 ]
+        node-version: [ 24.22.2, 26.13.1 ]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 25, 26 ]
+        node-version: [ 24.22.2, 26.13.1 ]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -35,7 +35,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [ 25, 26 ]
+        node-version: [ 24.22.2, 26.13.1 ]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
