@@ -64,3 +64,22 @@ jobs:
           else
             echo "Pas de réponse pour cet événement." >> "$GITHUB_STEP_SUMMARY"
           fi
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+      - run: npm Bot
+      - run: npm run lint
+
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: lts/*
+      - run: npm Bot
+      - run: npm test
