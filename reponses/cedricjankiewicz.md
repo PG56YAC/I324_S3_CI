@@ -1,6 +1,6 @@
 # Réponses de cedricjankiewicz
 
-q1: CI
+q1: Nettoyage
 q2:
 q3:
 q4:
