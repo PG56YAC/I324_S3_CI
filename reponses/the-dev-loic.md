@@ -1,7 +1,7 @@
 # Réponses de the-dev-loic
 
 q1: Nettoyage
-q2:
+q2: tests
 q3:
 q4:
 q5:
