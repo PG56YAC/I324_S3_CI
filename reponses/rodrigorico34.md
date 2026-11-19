@@ -2,7 +2,7 @@
 
 q1: Nettoyage
 q2: npm ci
-q3:
+q3: Run npm run lint
 q4:
 q5:
 q6:
