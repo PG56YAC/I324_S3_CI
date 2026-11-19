@@ -1,7 +1,7 @@
 # Réponses de thierryperroud
 
 q1: Nettoyage
-q2:
+q2: CI / install
 q3:
 q4:
 q5:
