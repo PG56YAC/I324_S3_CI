@@ -2,8 +2,8 @@ name: CI
 
 on:
   push:
-    paths:
-      - 'src/**'
+    paths-ignore:
+      - '**/*.md'
 
 jobs:
   lint:
