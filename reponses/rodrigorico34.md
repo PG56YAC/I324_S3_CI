@@ -1,8 +1,8 @@
 # Réponses de rodrigorico34
 
 q1: Nettoyage
-q2: npm ci
-q3: Run npm run lint
+q2: Run npm run lint
+q3: 
 q4:
 q5:
 q6:
