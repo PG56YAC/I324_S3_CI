@@ -1,3 +1,4 @@
+![CI](https://github.com/PG56YAC/I324_S3_CI/actions/workflows/ci.yml/badge.svg)
 # I324 – S3 – Intégration continue
 
 Vous rejoignez l'équipe qui développe une petite application de liste de tâches. Le linter et les tests existent, un hook les lance avant chaque commit. Pourtant, hier, quelqu'un a poussé du code qui ne passait pas le linter, et personne ne l'a vu avant la mise en production.
