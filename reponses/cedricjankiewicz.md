@@ -1,4 +1,4 @@
-# Réponses de cedricjankiewicz 
+# Réponses de cedricjankiewicz
 
 q1: Nettoyage
 q2: Run npm run lint
